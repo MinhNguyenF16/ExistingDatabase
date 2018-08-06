@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ExistingDatabase.ViewModels.CryptoWebsite>
+
+@{
+    /**/
+
+    ViewBag.Title = "Contact";
+}
+
+<h2>web stats</h2>
+
+<table>
+    <tr>
+        <th>
+            Website
+        </th>
+        <th>
+            Crypto
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.WebsiteName
+            </td>
+            <td>
+                @item.CryptoName
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ExistingDatabase.ViewModels.CryptoWebsite>
+
+@{
+                /**/
+
+                ViewBag.Title = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Crypto
+        </th>
+        <th>
+            Website
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WebsiteVM.Rank)
+        </td>
+        <td>
+            @item.Rank
+        </td>
+        <td>
+            @item.RankCount
+        </td>
+    </tr>
+}
+</table>
